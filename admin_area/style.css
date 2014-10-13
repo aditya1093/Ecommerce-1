@@ -1,0 +1,125 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+.main_wrapper{
+    width: 950px;
+    height: auto;
+    margin: auto;
+    background: antiquewhite;
+}
+
+
+ legend {
+    text-align: center;
+}
+
+fieldset{
+    margin: auto;
+    line-height: 2.8;
+    width: 600px;
+    border: none;
+}
+fieldset legend{
+    margin-left: 130px;
+    font-size: 28px;
+    color: black;
+    font-weight: bolder;
+}
+
+#desc{
+    font-size: 18px;
+    text-align: left;
+    clear: both;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    width: 310px;
+    font-size: 18px;
+}
+
+input select {
+    display: block;
+    float: left;
+    line-height: 1.5;
+}
+input{
+    height: 18px;   
+    margin-top: 20px;
+    display: inline-block;
+    clear: right;
+    width: 210px;
+}
+#prod_image{
+    font-size: 14px;
+    height: 25px;
+
+}
+select{
+   margin-top: 12px;   
+   margin-botton: 12px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+select option{
+    font-size: 16px;
+}
+
+
+
+#prod_desc{
+    clear: both;
+    margin-top: 20px;
+}
+#insert{
+    clear: both;
+    margin-left: 180px;
+    margin-top: 20px;
+    font-size: 16px;
+    height: 1.5em;
+}
+
+
+#footer{
+    width: 100%;
+    height: 30px;
+    background: ghostwhite;
+    clear: both;
+    line-height: 2.2em;
+    margin-top: 50px;
+}
+#footer p{
+  font-size: 15px;
+  text-align: right;
+  color: black;
+  font-weight: 20px;
+    width: 100%;
+}
