@@ -1,4 +1,5 @@
 <?php
+    if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
     if(!isset($_GET['user_query']))
         header('location: index.php');
 ?>
@@ -9,51 +10,30 @@
 ini_set('display_errors', 'On');
 require 'functions/functions.php';
 ?>
-
-
-<html lang="">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>Product Found</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' href='styles/style.css'>
+</head> 
 <body>
 
 <div class="main_wrapper">
 
     <div class="header_warpper">
         <img src="images/ad_banner.jpg" id="banner">
-
     </div>
 
     <!-- END OF MAIN WRAPPER -->
 
     <!-- START OF MENUBAR -->
-    <div class="menubar">
-
-        <!--START OF MENU -->
-        <ul id="menu">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="all_products.php">All Products</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Shopping Cart</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-        <!-- END OF MENU -->
-
-        <div id="form">
-            <form method='get' action='result.php' enctype='multipart/form-data'>
-                <input type="text" name="user_query" placeholder="Search a Product">
-                <input type="submit" name="search" value="search" />
-            </form>
-        </div>
-    </div>
-
+    <?php include "components/menubar.php";?>
     <!-- END OF MENU BAR -->
+
 
     <!-- CONTENT STARTS HERE -->
     <div class="content_wrapper">
@@ -80,10 +60,7 @@ require 'functions/functions.php';
         <!-- START CONTENT AREA -->
         <div id="content_area">
             <div id="shopping_cart">
-                        <span id = 'shopping_text'> Welcome Guest! <b> Shopping Cart - </b> Total Items: Total Price:
-                            <a href="cart.php"> Go To Cart </a>&nbsp;&nbsp;</span>
-
-
+                 <?php include "components/shopping_cart.php"; ?>
             </div>
             <div id="products_box">
                 <?php
@@ -98,7 +75,7 @@ require 'functions/functions.php';
                         exit();
                     }
 
-                    $query = "select * from products where product_title like '%$search_item%'";
+                    $query = "select * from products where product_keywords like '%$search_item%'";
                     $sql = $con->query($query);
 
                     while ($row = mysqli_fetch_array($sql)) {
@@ -132,12 +109,7 @@ require 'functions/functions.php';
 
 
         <!-- FOOTER STARTS HERE -->
-        <div id="footer">
-
-            <p> &copy; 2014 Amadou Barry &nbsp;</p>
-
-        </div>
-
+        <?php include "components/footer.php";?>
         <!-- END OF FOOTER -->
 
 

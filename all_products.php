@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-
 <?php
+if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
 ini_set('display_errors', 'On');
 require 'functions/functions.php';
 ?>
 
-
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <title>Product List</title>
+            <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+            <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+            <link rel='stylesheet' href='styles/style.css'>
+    </head>
 
 <body>
 
@@ -27,27 +27,7 @@ require 'functions/functions.php';
     <!-- END OF MAIN WRAPPER -->
 
     <!-- START OF MENUBAR -->
-    <div class="menubar">
-
-        <!--START OF MENU -->
-        <ul id="menu">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="all_products.php">All Products</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Shopping Cart</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-        <!-- END OF MENU -->
-
-        <div id="form">
-            <form method='get' action='results.php' enctype='multipart/form-data'>
-                <input type="text" name="user_query" placeholder="Search a Product">
-                <input type="submit" name="search" value="search" />
-            </form>
-        </div>
-    </div>
-
+    <?php include "components/menubar.php";?>
     <!-- END OF MENU BAR -->
 
     <!-- CONTENT STARTS HERE -->
@@ -72,36 +52,29 @@ require 'functions/functions.php';
         </div>
         <!-- END OF SIDE BAR -->
 
+
         <!-- START CONTENT AREA -->
-        <div id="content_area">
+         <div id="content_area">
+
+            <?php cart(); ?>
             <div id="shopping_cart">
-                        <span id = 'shopping_text'> Welcome Guest! <b> Shopping Cart - </b> Total Items: Total Price:
-                            <a href="cart.php"> Go To Cart </a>&nbsp;&nbsp;</span>
-
-
+                <?php include "components/shopping_cart.php"; ?>
             </div>
+
             <div id="products_box">
-                <?php getProducts();?>
+                <?php getProducts(); ?>
             </div>
 
         </div>
-        <!-- END OF CONTENTAREA -->
+        <!-- END OF CONTENT AREA -->
+
 
 
         <!-- FOOTER STARTS HERE -->
-        <div id="footer">
-
-            <p> &copy; 2014 Amadou Barry &nbsp;</p>
-
-        </div>
-
+        <?php include "components/footer.php";?>
         <!-- END OF FOOTER -->
 
-
     </div>
-
-
-
 
 
     <script src=""></script>
