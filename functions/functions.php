@@ -149,7 +149,6 @@ function total_price()
 //Display information for the product in the cart page
 function total_price_cart()
 {
-
     global $localhost, $username, $password, $database;
     $con = new mysqli($localhost, $username, $password, $database);
 
@@ -246,9 +245,7 @@ function total_price_cart()
                 </form>";
 
     echo $display;
-
     $con->close();
-
 }//END OF FUNCTION
 
 function getCategories()
@@ -353,7 +350,8 @@ function getBrand_admin_page()
     $con->close();
 }  // END OF FUNCTION
 
-// BRAND TO DISPLAY IN THE ADMIN PAGE
+// GETTING THE PRODUCTS FROM THE DATABASE TO DISPLAY THEM ON THE PAGE
+
 function getProducts()
 {
 
@@ -702,3 +700,211 @@ function remove_customer($c_id){
         $con->close();
 
 }
+
+function get_products_for_admin(){
+     global $localhost, $username, $password, $database;
+        $con = new mysqli($localhost, $username, $password, $database);
+
+        /* check connection */
+        if ($con->connect_errno) {
+            printf("Connect failed: %s\n", $con->connect_error);
+            exit();
+        }
+
+        $query = "select product_id, product_title, product_price, product_image, product_desc from products 
+        order by product_id asc";
+        $result = $con->query($query);
+
+        $display = "    <table align='center'>
+                            <tr>
+                                <th> Product ID </th>
+                                <th> Product title </th>
+                                <th> Product price </th>
+                                <th> Product image </th>
+                                <th> Product Description </th>
+                            </tr><tbody>";
+
+        while ($row = mysqli_fetch_array($result)) {
+            $prod_id = $row['product_id'];
+            $prod_title = $row['product_title'];
+            $prod_price = $row['product_price'];
+            $prod_image = $row['product_image'];
+            $prod_desc = $row['product_desc'];
+
+            $display .= "     <tr>
+                                <td>$prod_id</td>
+                                <td>$prod_title</td>
+                                <td>$$prod_price</td>
+                                <td> <img src='product_image/$prod_image' width='100' height='80'/></td>
+                                <td>$prod_desc</td>
+                              </tr>";
+        }
+        $display .= "</tbody></table>";
+        echo $display;
+}
+function insert_new_categories($new_category)
+{
+    global $localhost, $username, $password, $database;
+    $con = new mysqli($localhost, $username, $password, $database);
+
+    /* check connection */
+    if ($con->connect_errno) {
+        printf("Connect failed: %s\n", $con->connect_error);
+        exit();
+    }
+    $check = "select count(*) count from categories where cat_title like '$new_category'";
+    $result = $con->query($check);
+
+    while ($row = mysqli_fetch_array($result))
+        $count = $row['count'];
+     
+     $result = false;
+    if($count==0){
+        $query = "insert into categories(cat_title) values('$new_category')";
+        $result = $con->query($query);
+    }
+
+    $con->close();
+    return $result;
+}  // END OF FUNCTION
+
+function insert_new_brand($new_brand)
+{
+    global $localhost, $username, $password, $database;
+    $con = new mysqli($localhost, $username, $password, $database);
+
+    /* check connection */
+    if ($con->connect_errno) {
+        printf("Connect failed: %s\n", $con->connect_error);
+        exit();
+    }
+    $check = "select count(*) count from brands where brand_title like '$new_brand'";
+    $result = $con->query($check);
+
+    while ($row = mysqli_fetch_array($result))
+        $count = $row['count'];
+     
+     $result = false;
+    if($count==0){
+        $query = "insert into brands(brand_title) values('$new_brand')";
+        $result = $con->query($query);
+    }
+
+    $con->close();
+    return $result;
+}  // END OF FUNCTION
+
+function check_user($email, $user_password){
+
+    global $localhost, $username, $password, $database;
+        $con = new mysqli($localhost, $username, $password, $database);
+
+        /* check connection */
+        if ($con->connect_errno) {
+            printf("Connect failed: %s\n", $con->connect_error);
+            exit();
+        }
+
+        $query = "select customer_id, customer_email, customer_name from customers where 
+                    customer_password='$user_password' and customer_email='$email'";
+        $result = $con->query($query);
+
+        if($result->num_rows==0){
+            echo "<script> alert('$email $user_password');</script>;";
+        }
+
+        else{
+            
+            while ($n = mysqli_fetch_array($result)) {
+                $name = $n['customer_name'];
+                $id  = $n['customer_id'];
+            }
+
+            $_SESSION['customer_name'] = $name;
+            $_SESSION['customer_email'] = $email;
+            $_SESSION['customer_id'] = $id;
+
+             echo "<script> window.location ='http://localhost:8888/e-commerce2/customer/my_account.php';</script>";
+        }
+
+        $con->close();
+}
+function check_admin($admin_email, $admin_password){
+
+    global $localhost, $username, $password, $database;
+        $con = new mysqli($localhost, $username, $password, $database);
+
+        /* check connection */
+        if ($con->connect_errno) {
+            printf("Connect failed: %s\n", $con->connect_error);
+            exit();
+        }
+
+        $query = "select admin_id, admin_email, admin_name from admin where 
+                    admin_password='$admin_password' and admin_email='$admin_email'";
+        $result = $con->query($query);
+
+        if($result->num_rows==0){
+            echo "<script> alert('Your email and password do not match.');</script>;";
+        }
+
+        else{
+            
+            while ($n = mysqli_fetch_array($result)) {
+                $name = $n['admin_name'];
+                $id  = $n['admin_id'];
+                $email  = $n['admin_email'];
+            }
+
+            $_SESSION['admin_name'] = $name;
+            $_SESSION['admin_email'] = $email;
+            $_SESSION['admin_id'] = $id;
+
+             echo "<script> window.location ='http://localhost:8888/e-commerce2/admin_area/index.php';</script>";
+        }
+
+        $con->close();
+}
+function get_categories_for_admin(){
+global $localhost, $username, $password, $database;
+        $con = new mysqli($localhost, $username, $password, $database);
+
+        /* check connection */
+        if ($con->connect_errno) {
+            printf("Connect failed: %s\n", $con->connect_error);
+            exit();
+        }
+
+        $query = "select cat_id, cat_title from categories";
+        $result = $con->query($query);
+
+        $display = "    <table align='center'>
+                            <tr>
+                                <th> Category ID </th>
+                                <th> Category title </th>
+                                <th> Edit  </th>
+                                <th> Delete </th>
+                            </tr><tbody>";
+
+        while ($row = mysqli_fetch_array($result)) {
+            $cat_id = $row['cat_id'];
+            $cat_title = $row['cat_title'];
+     
+
+            $display .= '     <tr>
+                                <td>'.$cat_id.'</td>
+                                <td>'.$cat_title.'</td>
+                                <td><a href=""> Edit </a></td>
+                                 <td><a href=""> Delete </a></td>
+                              </tr>';
+        }
+        $display .= "</tbody></table>";
+        echo $display;
+
+
+
+
+
+}
+
+

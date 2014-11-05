@@ -12,7 +12,7 @@ $ip = getIpAddress();
 <head>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <title>Home Page</title>
+        <title>Customer Login Page</title>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
         <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
         <link rel='stylesheet' href='styles/style.css'>
@@ -66,57 +66,10 @@ $ip = getIpAddress();
         </div>
         <!-- END OF CONTENTAREA -->
 
-        <?php 
+        <?php
 
             if(isset($_POST['email']) && isset($_POST['password'])){
-                
-
-        global $localhost, $username, $password, $database;
-        $con = new mysqli($localhost, $username, $password, $database);
-
-        /* check connection */
-        if ($con->connect_errno) {
-            printf("Connect failed: %s\n", $con->connect_error);
-            exit();
-        }
-
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $query = "select customer_id, customer_name from customers where customer_password='$password' and customer_email='$email'";
-        $result = $con->query($query);
-
-        if($result->num_rows==0){
-            echo "<script> alert('Password or email incorrect');</script>;";
-        }
-
-        else{
-            
-            while ($n = mysqli_fetch_array($result)) {
-                $name = $n['customer_name'];
-                $id  = $n['customer_id'];
-            }
-
-            $_SESSION['customer_name'] = $name;
-            $_SESSION['customer_email'] = $email;
-             $_SESSION['customer_id'] = $id;
-
-             echo "<script> window.location ='http://localhost:8888/e-commerce2/customer/my_account.php';</script>";
-            
-
-             /*
-            $select_cart = "select p_id from cart where ip_add='$ip'";
-            $result1 = $con->query($select_cart);
- 
-            if($result1->num_rows==0)
-                echo "<script> window.location ='http://localhost:8888/e-commerce2/my_account.php';</script>";
-             else
-                echo "<script> window.location = 'http://localhost:8888/e-commerce2/payement.php';</script>";
-                */
-        }
-
-        $con->close();
-        
+                 check_user($_POST['email'], $_POST['password']); 
             }
         ?>
         <!-- FOOTER STARTS HERE -->

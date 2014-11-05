@@ -1,3 +1,13 @@
+<?php
+if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
+ini_set('display_errors', 'On');
+require '../functions/functions.php';
+
+ if(empty($_SESSION['admin_email']))
+        echo "<script> window.location ='http://localhost:8888/e-commerce2/admin_area/login.php';</script>";
+
+?>
+
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -7,7 +17,6 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 </head>
-<?php  require '../functions/functions.php'; ?>
 <body>
 
     <div class="main_wrapper">
@@ -16,7 +25,8 @@
             <img src="../images/ad_banner.jpg" id="banner">
             
         </div>
-    <form id="form_insert_product"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" id="prod_form">
+
+        <form id="form_insert_product"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" id="prod_form">
           
             <p style="text-align:center; color: black;">Insert New Products Here</p>
             <hr />
