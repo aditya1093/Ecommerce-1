@@ -3,8 +3,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
 ini_set('display_errors', 'On');
 require 'functions/functions.php';
     
-        if(isset($_POST['admin_email']) && isset($_POST['admin_password'])){
-             check_admin($_POST['admin_email'], $_POST['admin_password']); 
+        if(isset($_POST['customer_email']) && isset($_POST['customer_password'])){
+             
         }
 ?>
 
@@ -27,7 +27,7 @@ require 'functions/functions.php';
     <div class="jumbotron main">
         <div class="row">
             <header>
-                <p class="text-center h1"> Administrator Login </p>
+                <p class="text-center h1"> Customer Login </p>
             </header>
 
                     <div class="row">
@@ -42,6 +42,7 @@ require 'functions/functions.php';
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="admin_email" id="admin_email" placeholder="Email"
                                           type="text" data-validation="email">
+                                          
                                         <input type="password" class="form-control" name="admin_password" id="admin_password" placeholder="Password" 
                                                 data-validation="length" data-validation-length="min5" data-validation="confirmation">
                                     </div>
@@ -54,7 +55,7 @@ require 'functions/functions.php';
                                         <a href="#" class="pull-right need-help"> Need help? </a><span class="clearfix"></span>
                                 </form>
                             </div>
-                            <a href="#" class="text-center new-account" style="font-size: 18px"> Create an account </a>
+                            <a href="./register.php" class="text-center new-account" style="font-size: 18px"> Create an account </a>
                         </div>
                     </div>
         </div>

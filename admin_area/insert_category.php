@@ -1,65 +1,103 @@
 <?php
 if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
 ini_set('display_errors', 'On');
-require '../functions/functions.php';
+require 'functions/functions.php';
 
     if(empty($_SESSION['admin_email']))
-        echo "<script> window.location ='http://localhost:8888/e-commerce2/admin_area/login.php';</script>";
+        echo "<script> window.location ='./login.php';</script>";
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['c_name'])){
 
-        $new_category = $_POST['category'];
+        $new_category = $_POST['c_name'];
         $result = insert_new_categories($new_category);
+
         if($result)
-            echo "<script>window.location='http://localhost:8888/e-commerce2/admin_area/index.php?category_inserted';</script>";
+            echo "<script>window.location='./index.php?category_inserted';</script>";
         else
-            echo "<script> alert('The category already exit in the database.'); </script>";
+            echo "<script> alert('Oops something went wrong.'); </script>";
     } 
 ?>
 
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Category</title>
-    <link rel="stylesheet" href="styles/style.css">
-     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+    <?php include "header.php"; ?>
+    <title> Add new Category </title>
+
 </head>
+
+
 <body>
 
-    <div class="main_wrapper" style="min-height: 300px;">
-            <img src="../images/ad_banner.jpg" class="img-responsive" width="100%" height="250">
+<div class="container wrapper">
 
+    <img src="images/banner.png" class="img-responsive" width="100%" height="250">
 
-            <?php include"menu.php" ?>    
-                    
-            <div class="content_view_product">
+    <ul class="nav nav-tabs">
+        <li ><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="view_products.php"> Products </a></li>
+        <li><a href="insert_product.php"> New Product </a></li>
+        <li><a href="view_categories.php"> Categories </a></li>
+        <li class="active"><a href="insert_category.php"> New Category</a></li>
+        <li><a href="view_brands.php"> Brands </a></li>
+        <li><a href="insert_brand.php"> New Brand </a></li>
+        <li><a href="customers.php"> Customers </a></li>
+        <li><a href="view_orders.php"> Orders </a></li>
+        <li><a href="view_payment.php"> Payments </a></li>
+        <li><a  id="logout" > Logout </a></li>
+    </ul>
 
-                <p style="text-align: center; font-size: 30px; margin-botton:20px; font-family: sans-serif; margin-botton: 20px;margin-top: 10px;">Insert New Category</p>
-                <form method="post" id="form_category_insert" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-inline" role="form" enctype="multipart/form-data">
-                         
-                        <div class="form-group">
-                            <label for="name">Enter New Category: </label>
-                            <input type="text" id="category" name="category" required="required"/>
-                        </div>
-      
-                        <input type="hidden" name='submit' value='submit'/>
-                        <button type="submit" class="btn btn-xs btn-primary" > Add Category </button>
+    <div class="jumbotron main">
+        <div class="row">
+            <header>
+                <p class="text-center h1"> Add new Category </p>
+            </header>
 
-                    </form>
-            <div>
-    
+            <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>"
+                  id="category-form">
 
-        
+                <div class="form-group">
+                    <label for="c_name" class="col-xs-4 control-label"> Category Name </label>
 
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" id="c_name" placeholder="Category name" name="c_name"
+                               data-validation="required" autocomplete="off">
+                        <p id="cat_suggestion"> </p>
+                    </div>
+                </div>
 
-        <!-- FOOTER STARTS HERE -->
-        <?php include "../components/footer.php";?>
-        <!-- END OF FOOTER -->
+                <div class="form-group">
+                   &nbsp;&nbsp; <button type="submit" class="btn btn-md btn-primary col-xs-offset-4" value="submit" name="submit"> &nbsp;
+                        <span class="glyphicon glyphicon-floppy-saved"></span> Submit &nbsp; </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- FOOTER STARTS -->
+    <div class="row footer">
+
+        <?php include "footer.php"; ?>
 
     </div>
-    <!-- END OF THE PAGE -->
+    <!-- FOOTER ENDS -->
+</div>
+<!-- jQuery Form Validation code -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+<script src="js/script.js"></script>
+<script> 
+
+    $.validate(); 
+    
+    $("#c_name").keyup(function(){
+    $.ajax({
+        url:"suggestions/category.php?categories="+ $("#c_name").val(),
+        success:function(result){
+        $("#cat_suggestion").html(result);
+        }});
+    });
+
+</script>
+
 </body>
 </html>

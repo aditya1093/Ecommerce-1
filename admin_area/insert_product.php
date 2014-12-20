@@ -1,111 +1,177 @@
 <?php
-if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
 ini_set('display_errors', 'On');
-require '../functions/functions.php';
+require 'functions/functions.php';
 
- if(empty($_SESSION['admin_email']))
-        echo "<script> window.location ='http://localhost:8888/e-commerce2/admin_area/login.php';</script>";
+if (empty($_SESSION['admin_email']))
+    echo "<script> window.location ='./login.php';</script>";
 
+if (isset($_POST['submit'])) {
+
+    $p_title = $_POST['p_title'];
+    $p_category = $_POST['p_category'];
+    $p_brand = $_POST['p_brand'];
+    
+    $p_price = $_POST['p_price'];
+    $p_description = $_POST['p_description'];
+    $p_keyword = $_POST['p_keyword'];
+
+    $p_image = $_FILES["p_image"];
+    move_uploaded_file($_FILES["p_image"]['tmp_name'],"functions/product_image/".$_FILES["p_image"]['name']);
+    $p_image = $_FILES["p_image"]['name'];
+
+    $product = array($p_title, $p_category, $p_brand, $p_image, $p_price, $p_description, $p_keyword);
+
+    $result = insert_new_product($product);
+
+    if ($result)
+        echo "<script>window.location='./index.php?product_inserted';</script>";
+    else
+        echo "<script> alert('Oops something went wrong.'); </script>";
+    }
 ?>
 
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Product</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+    <?php include "header.php"; ?>
+    <title> Add new Product </title>
+
 </head>
+
+
 <body>
 
-    <div class="main_wrapper">
+<div class="container wrapper">
 
-        <div class="header_warpper">
-            <img src="../images/ad_banner.jpg" id="banner">
-            
+    <img src="images/banner.png" class="img-responsive" width="100%" height="250">
+
+    <ul class="nav nav-tabs">
+        <li ><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="view_products.php"> Products </a></li>
+        <li class="active"><a href="insert_product.php"> New Product </a></li>
+        <li><a href="view_categories.php"> Categories </a></li>
+        <li><a href="insert_category.php"> New Category</a></li>
+        <li><a href="view_brands.php"> View Brand </a></li>
+        <li><a href="insert_brand.php"> New Brand </a></li>
+        <li><a href="customers.php"> Customers </a></li>
+        <li><a href="view_orders.php"> Orders </a></li>
+        <li><a href="view_payment.php"> Payments </a></li>
+        <li><a  id="logout" > Logout </a></li>
+    </ul>
+
+    <div class="jumbotron main">
+        <div class="row">
+            <header>
+                <p class="text-center h1"> Add new Product </p>
+            </header>
+
+            <form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>"
+                  id="product-form" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="p_title" class="col-xs-4 control-label"> Product Title </label>
+
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="p_title" placeholder="Product Title" name="p_title"
+                               data-validation="required">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_category" class="col-xs-4 control-label"> Product Category </label>
+
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="p_category" placeholder="Product Category"
+                               name="p_category" data-validation="required">
+                        <p id="cat_suggestion"> </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_brand" class="col-xs-4 control-label"> Product Brand </label>
+
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="p_brand" placeholder="Product Brand" name="p_brand">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_image" class="col-xs-4 control-label"> Product Image </label>
+
+                    <div class="col-xs-6">
+                        <input type="file" class="filestyle" id="p_image" name="p_image"
+                               data-input="false" data-buttonName="btn-default" data-validation="required">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_price" class="col-xs-4 control-label"> Product Price </label>
+
+                    <div class="col-xs-6">
+                        <input type="numeric" class="form-control" id="p_price" placeholder="Product Price"
+                               name="p_price" data-validation="required" data-validation="number"
+                               data-validation-allowing="float" data-validation-decimal-separator=","/>
+                    </div>
+                </div>
+
+               
+
+                <div class="form-group">
+                    <label for="p_keyword" class="col-xs-4 control-label"> Product Keywords </label>
+
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" id="p_keyword" placeholder="Product Keyword"
+                               name="p_keyword" data-validation="required">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_description" class="col-xs-4 control-label"> Product Description </label>
+
+                    <div class="col-xs-6">
+                        <textarea id="p_description" name="p_description" class="form-control" rows="10"
+                                  placeholder="Description..." data-validation="required"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                   &nbsp;&nbsp; <button type="submit" class="btn btn-md btn-primary col-xs-offset-4" value="submit" name="submit"> &nbsp;
+                        <span class="glyphicon glyphicon-floppy-saved"></span> Submit &nbsp; </button>
+                </div>
+
+            </form>
+
         </div>
+    </div>
+    <!-- FOOTER STARTS -->
+    <div class="row footer">
 
-        <form id="form_insert_product"action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" id="prod_form">
-          
-            <p style="text-align:center; color: black;">Insert New Products Here</p>
-            <hr />
-               <label for="prod_title">Product Title: </label>
-            <input type="text" id="prod_title" name="prod_title" required="required" size="25"/>
-
-            <!--  DISPLAYING THE CATEGORIES FROM THE DATABASE -->
-
-            <label for="prod_cat">Product Category: </label>
-            <select name="prod_cat" id="prod_cat">
-                <option value="select a Category"><-- Select a Category --></option>
-                <?php getCategory_admin_area(); ?>
-            </select>
-
-                 <!--  DISPLAYING THE BRANDS FROM THE DATABASE -->
-               <label for="prod_brand">Product Brand: </label>
-            <select name="prod_brand" id="prod_brand">
-                <option value="Select a brand"><-- Select a Brand --></option>
-                <?php getBrand_admin_page(); ?>
-            </select>
-
-               <label for="prod_image">Product Image: </label>
-            <input  id="prod_image" name="prod_image" type="file" size="25"/>
-               <label for="prod_price">Product Price: </label>
-            <input  id="prod_price" name="prod_price" type="text" required="required" size="25"/>
-
-            <label for="prod_key">Product Keywords: </label>
-            <input  type="text" id="prod_key" name="prod_key" required="required" size="25"/>
-
-            <span style="display: block;" id="desc" ><p style="text-align: left;"> Product Description: </p></span>
-            <textarea  id="prod_desc" name="prod_desc" cols="20" rows="15"> </textarea>
-
-            <input type="submit" name="submit" value="Insert Product Now" id="insert"/>
-    
-    </form>
-
-        <!-- FOOTER STARTS HERE -->
-        <?php include "../components/footer.php";?>
-        <!-- END OF FOOTER -->
+        <?php include "footer.php"; ?>
 
     </div>
-    <!-- END OF THE PAGE -->
+    <!-- FOOTER ENDS -->
+</div>
+<!-- jQuery Form Validation code -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+<script src="js/script.js"></script>
+<script> 
+
+    $.validate(); 
+    
+    $("#p_category").keyup(function(){
+    $.ajax({
+        url:"suggestions/category.php?categories="+ $("#p_category").val(),
+        success:function(result){
+        $("#cat_suggestion").html(result);
+        }});
+    });
+
+</script>
 
 </body>
 </html>
-<?php
-        if(isset($_POST['submit'])){
-            $con = new mysqli("localhost", "root", "root", "e_commerce2");
-            /* check connection */
-            if ($con->connect_errno) {
-                printf("Connect failed: %s\n", $con->connect_error);
-                exit();
-            }
-            //GETTING TEXT DATA FROM THE FIELD
-            $prod_title     =  mysqli_real_escape_string($con, $_POST['prod_title']);
-            $prod_cat       =  mysqli_real_escape_string($con, $_POST['prod_cat']);
-            $prod_brand     =  mysqli_real_escape_string($con, $_POST['prod_brand']);
-            $prod_price     =  mysqli_real_escape_string($con, $_POST['prod_price']);
-            $prod_desc      =  mysqli_real_escape_string($con, $_POST['prod_desc']);
-            $prod_key       =  mysqli_real_escape_string($con, $_POST['prod_key']);
-
-            //GETTING IMAGE FORM THE FIELD
-            $prod_image = $_FILES[mysqli_real_escape_string($con,'prod_image')]['name'];
-            $prod_image_tmp = $_FILES['prod_image']['tmp_name'];
-
-            move_uploaded_file($prod_image_tmp, "product_image/$prod_image");
-
-            $query = "insert into products(product_cat,product_brand, product_title, product_price, product_desc, product_image, product_keywords)
-                                values('$prod_cat', '$prod_brand', '$prod_title', '$prod_price', '$prod_desc', '$prod_image', '$prod_key')";
-
-            $sql =  mysqli_query($con, $query);
-            if($sql){
-                echo "<script>alert('The Product was successfully added to the database');</script>";
-            }else
-                echo $sql;
-
-            $con->close();
-        }
-?>
-
-
-

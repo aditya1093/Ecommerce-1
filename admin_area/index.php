@@ -1,49 +1,82 @@
  <?php
-if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
-ini_set('display_errors', 'On');
-require '../functions/functions.php';
+    if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
+    ini_set('display_errors', 'On');
+    require 'functions/functions.php';
     
-    if(empty($_SESSION['admin_email']))
-        echo "<script> window.location ='http://localhost:8888/e-commerce2/admin_area/login.php';</script>";
-    ?>
+    if( !isset($_SESSION['admin_email']) ){
+        echo "<script> window.location ='./login.php';</script>";
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Product</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+    <?php include "header.php"; ?>
+    <title> Home Page </title>
+
 </head>
+
 
 <body>
 
-    <div class="main_wrapper" style="min-height: 300px;">
-            <img src="../images/ad_banner.jpg" class="img-responsive" width="100%" height="250" style="margin-bottom:0;">
-            <img src="images/administrator-icon.png" class="img-responsive"  style="float: left; margin-top: 0;" />
-    
-        <div class="content">
-            <p style="font-size: 55px; margin-top: 85px; font-family:sans-serif; line-height: 1.8em" align="center"> Welcome to the Admin Area </p>
-            <?php
-                if(isset($_GET['category_inserted'])){
-                    echo '<p style="color: green; font-size: 15px"> Category Successfully Added. </p>';
-                }
-                else if(isset($_GET['brand_inserted'])){
-                    echo '<p style="color: green; font-size: 15px"> Brand Successfully Added. </p>';
-                }
+<div class="container wrapper">
 
-            ?>
+    <img src="images/banner.png" class="img-responsive" width="100%" height="250">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="view_products.php"> Products </a></li>
+        <li><a href="insert_product.php"> New Product </a></li>
+        <li><a href="view_categories.php"> Categories </a></li>
+        <li><a href="insert_category.php"> New Category</a></li>
+        <li><a href="view_brands.php"> Brands </a></li>
+        <li><a href="insert_brand.php"> New Brand </a></li>
+        <li><a href="customers.php"> Customers </a></li>
+        <li><a href="view_orders.php"> Orders </a></li>
+        <li><a href="view_payment.php"> Payments </a></li>
+        <li><a  id="logout" > Logout </a></li>
+    </ul>
+
+    <div class="jumbotron main">
+        <div class="row">
+            <header>
+                <p class="text-center h1"> Welcome to the Admin Page </p>
+            </header>
+
+            <div>
+
+                <?php
+                    if(isset($_GET['category_inserted'])){
+                        echo '<p class="text-center success"> Category Successfully Added. </p>';
+                    }
+                    else if(isset($_GET['brand_inserted'])){
+                        echo '<p class="text-center"> Brand Successfully Added. </p>';
+                    }
+                    else if(isset($_GET['product_inserted'])){
+                        echo '<p class="text-center success"> Product Successfully Added. </p>';
+                    }
+
+                ?>
+
+            </div>
+            
+
         </div>
+    </div>
+    <!-- FOOTER STARTS -->
+    <div class="row footer">
 
-        <?php include"menu.php" ?>   
-
-
-        <!-- FOOTER STARTS HERE -->
-        <?php include "../components/footer.php";?>
-        <!-- END OF FOOTER -->
+        <?php include "footer.php"; ?>
 
     </div>
-    <!-- END OF THE PAGE -->
+    <!-- FOOTER ENDS -->
+</div>
+<!-- jQuery Form Validation code -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+<script src="js/script.js"></script>
+
+
 </body>
 </html>

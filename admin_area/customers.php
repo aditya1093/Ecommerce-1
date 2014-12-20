@@ -14,9 +14,10 @@ if (empty($_SESSION['admin_email']))
 <head>
 
   <?php include "header.php"; ?>
-     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 
-    <title> Categories </title>
+    <title> Cutomers </title>
+
 </head>
 
 
@@ -30,11 +31,11 @@ if (empty($_SESSION['admin_email']))
         <li ><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
         <li><a href="view_products.php"> Products </a></li>
         <li ><a href="insert_product.php"> New Product </a></li>
-        <li class="active"><a href="view_categories.php"> Categories </a></li>
+        <li><a href="view_categories.php"> Categories </a></li>
         <li><a href="insert_category.php"> New Category</a></li>
         <li><a href="view_brands.php"> Brands </a></li>
         <li><a href="insert_brand.php"> New Brand </a></li>
-        <li><a href="customers.php"> Customers </a></li>
+        <li class="active"><a href="view_customers.php"> Customers </a></li>
         <li><a href="view_orders.php"> Orders </a></li>
         <li><a href="view_payment.php"> Payments </a></li>
         <li><a  id="logout" > Logout </a></li>
@@ -43,31 +44,29 @@ if (empty($_SESSION['admin_email']))
     <div class="jumbotron main">
         <div class="row">
             <header>
-                <p class="text-center h1"> Categories </p>
+                <p class="text-center h1"> Customers </p>
             </header>
-            <col width="50%">
-            <col width="50%">
 
-           <table id="product_table" class="table table-hover table-striped" ng-table="tableParams">
+       <table id="product_table" class="table table-hover table-striped" ng-table="tableParams">
             <thead>
                 <tr>
-                    <th> Category ID </th>
-                    <th> Category Title </th>
-                    <th> Action </th>
+                    <th> Name </th>
+                    <th> Email </th>
+                    <th> Phone </th>
+                    <th> Actions </th>
                 </tr>
             </thead>
-
-            <tbody data-ng-app="" data-ng-controller="Categories">
-
-                <tr data-ng-repeat="category in categories">
-                    <td> {{ category.id }} </td>
-                    <td> {{ category.title }} </td>
-                    <td class="action"> <span id="edit" class="text-center" data-ng-click="edit.doClick()"> Edit </span>
+            <tbody data-ng-app="" data-ng-controller="Customers">
+                <tr data-ng-repeat="customer in customers"> 
+                     <td> {{ customer.name }} </td>
+                     <td> {{ customer.email }} </td>
+                     <td> {{ customer.phone }} </td>
+                     <td class="action"> <span id="edit" class="text-center" data-ng-click="edit.doClick()"> Edit </span>
                         <span id="remove" class="text-center" data-ng-click="remove.doClick()"> Remove </span> 
                     </td>
                 </tr>
+                
             </tbody>
-
         </table>
 
 
@@ -84,16 +83,15 @@ if (empty($_SESSION['admin_email']))
 <!-- jQuery Form Validation code -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 <script src="js/script.js"></script>
+
 <script> 
 
-    $('#category_table').dataTable();
-
-    function Categories($scope, $http) {
+        function Customers($scope, $http) {
            
-        $http.get("functions/files/categories.php").success(function(response){
-            $scope.categories = response;
-        });
-        
+            $http.get("functions/files/customers.php").success(function(response){
+                $scope.customers = response;
+            });
+
         $scope.edit  = {};
         $scope.remove  = {};
 
@@ -103,7 +101,8 @@ if (empty($_SESSION['admin_email']))
           $scope.remove.doClick = function(){
            alert('hsdfjdsflkjsdfl');
         }
-    }
+        
+        }
 
 </script>
 
