@@ -23,19 +23,7 @@
 
     <img src="images/banner.png" class="img-responsive" width="100%" height="250">
 
-    <ul class="nav nav-tabs">
-        <li ><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
-        <li class="active"><a href="view_products.php"> Products </a></li>
-        <li><a href="insert_product.php"> New Product </a></li>
-        <li><a href="view_categories.php"> Categories </a></li>
-        <li><a href="insert_category.php"> New Category</a></li>
-        <li><a href="view_brands.php"> View Brand </a></li>
-        <li><a href="insert_brand.php"> New Brand </a></li>
-        <li><a href="customers.php"> Customers </a></li>
-        <li><a href="view_orders.php"> Orders </a></li>
-        <li><a href="view_payment.php"> Payments </a></li>
-        <li><a  id="logout" > Logout </a></li>
-    </ul>
+    <?php include "menu.php"; ?>
 
     <div class="jumbotron main">
         <div class="row" data-ng-app="" data-ng-controller="Products">
@@ -91,9 +79,11 @@
 
 <script> 
 
+        $("#products").addClass("active");
+
         function Products($scope, $http) {
            
-            $http.get("functions/files/products.php").success(function(response){
+            $http.get("api/files/products.php").success(function(response){
                 $scope.products = response;
             });
 

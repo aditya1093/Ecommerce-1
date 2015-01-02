@@ -4,7 +4,21 @@ ini_set('display_errors', 'On');
 require 'functions/functions.php';
     
         if(isset($_POST['admin_email']) && isset($_POST['admin_password'])){
-             check_admin($_POST['admin_email'], $_POST['admin_password']); 
+             if(filter_input(INPUT_POST, 'admin_email', FILTER_VALIDATE_EMAIL) &&  
+                            filter_input(INPUT_POST,'admin_password')){
+
+            $email = strip_tags( trim( $_POST[ 'admin_email' ] ) );
+            $password = strip_tags( trim( $_POST[ 'admin_password' ] ) );
+
+            $admin = array("email"=>$email, "password"=> $password);
+             
+             $result = admin_login($admin);
+
+             if ($result)
+                echo "<script> window.location ='./index.php';</script>";
+             else 
+                $error = "error";
+            }
         }
 ?>
 
@@ -31,8 +45,16 @@ require 'functions/functions.php';
             </header>
 
                     <div class="row">
+                          <?php
+
+                                if(isset($error)){
+                                    echo "<p class='text-center alert-danger'>You entered an invalid email or password.</p>";
+                                   }
+
+                            ?>
                         <div class="col-sm-6 col-md-4 col-md-offset-4">
                             <p class="h3 text-center login-title"> Sign in to your account </p>
+
                             <div class="account-wall">
                                 <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                                     alt="">

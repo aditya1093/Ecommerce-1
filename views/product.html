@@ -1,0 +1,23 @@
+
+<div class="row"> 
+
+	<div class="col-xs-4">
+		<img data-ng-src='admin_area/functions/product_image/{{ product[0].image }}' class="img-responsive img-thumbnail product-image">
+		   
+          <p class="text-center" style="color: #4682B4;"> Price: {{ ' '+ product[0].price | currency}} </p>
+        
+	</div>
+
+	<div class="col-xs-offset-2 col-xs-6">
+		<p class="h1 text-center"> {{ product[0].title }} </p>
+
+		<p> {{ product[0].description }} </p>
+		<hr />
+
+		<a class="btn btn-md btn-primary" ng-click="addToCart(product[0].id)"
+            <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+        </a> 
+
+	</div>
+
+</div>

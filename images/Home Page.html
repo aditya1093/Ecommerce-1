@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:8888/ecommerce/#/login -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+     <title> Home Page </title>
+
+         
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ecommerce Site">
+    <meta name="author" content="Amadou Barry">
+
+    <link href="./Home Page_files/style.css" rel="stylesheet" type="text/css">
+
+    <script src="./Home Page_files/jquery-1.10.2.js"></script>
+    <script src="./Home Page_files/jquery-1.11.1.min.js"></script>
+    <script src="./Home Page_files/angular.min.js"></script>
+    <script src="./Home Page_files/angular-route.min.js"></script>
+    <script src="./Home Page_files/jquery-ui.js"></script>
+    <script src="./Home Page_files/bootstrap.min.js"></script>
+ 
+    <script src="./Home Page_files/bootstrap.min(1).js"></script>
+    <script src="./Home Page_files/bootstrap-filestyle.min.js"></script>
+    <script src="./Home Page_files/bootstrap.min(1).js"></script>
+   
+    <script src="./Home Page_files/script.js"></script>
+
+
+
+
+
+</head>
+
+
+<body data-ng-app="myApp" class="ng-scope">
+
+<div class="container wrapper container-fluid">
+
+    <img src="./Home Page_files/banner.png" class="img-responsive" width="100%" height="250">
+
+    <!-- Start Menubar -->
+          <ul class="nav nav-tabs nav-justified menu">
+        <li class="home-menu active"><a ng-href="/ecommerce/#" href="http://localhost:8888/ecommerce/#"> Home <span class="glyphicon glyphicon-home"></span></a></li>
+        <li class="products-menu"><a ng-href="#/products/all" href="http://localhost:8888/ecommerce/#/products/all"> Products </a></li>
+
+          <li class="social dropdown categories-menu">
+                <a href="http://localhost:8888/ecommerce/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Categories <span class="caret"></span></a>
+               
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ng-href="/ecommerce/#/products/phone" href="http://localhost:8888/ecommerce/#/products/phone">Phone</a></li>
+                    <li><a ng-href="/ecommerce/#/products/laptops" href="http://localhost:8888/ecommerce/#/products/laptops">Laptops</a></li>
+                    <li><a ng-href="/ecommerce/#/products/desktop" href="http://localhost:8888/ecommerce/#/products/desktop">Desktops</a></li>
+                    <li><a ng-href="/ecommerce/#/products/camera" href="http://localhost:8888/ecommerce/#/products/camera">Camera</a></li>
+                    <li><a ng-href="/ecommerce/#/products/accessories" href="http://localhost:8888/ecommerce/#/products/accessories">Accessories</a></li>
+                </ul>
+            </li>
+
+        <li class="account-menu"><a href="http://localhost:8888/ecommerce/#/account"> <i class="fa fa-users"></i>  Account </a></li>
+        <li class="cart-menu"><a href="http://localhost:8888/ecommerce/cart.php"> <span class="glyphicon glyphicon-shopping-cart"></span> Cart </a></li>
+        <li class="about-menu"><a href="http://localhost:8888/ecommerce/#/about"> About Us </a></li>
+        <li class="contact-menu"><a href="http://localhost:8888/ecommerce/contact.php"> Contact Us </a></li>
+        <li class="admin-menu"><a href="http://localhost:8888/ecommerce/admin_area/"><span class="glyphicon glyphicon-user"> Administrator </span></a></li>     <!-- End Menubar -->
+
+    <div class="jumbotron main">
+
+      <!-- ngView:  --><div data-ng-view="" class="ng-scope">
+    <div class="row ng-scope">
+
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <p class="h3 text-center lead login-title"> Sign in to your account </p>
+            <div class="account-wall">
+                <img class="profile-img" src="./Home Page_files/photo.jpg" alt="">
+       
+                <form id="login_form" class="form-signin ng-pristine ng-valid" action="http://localhost:8888/ecommerce/customer/login.php" method="post">
+                   
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="customer_email" id="customer_email" placeholder="Email" data-validation="email" value="" required="" maxlength="40">
+                          
+                        <input type="password" class="form-control" name="customer_password" id="customer_password" placeholder="Password" data-validation="length" data-validation-length="min6" required="" maxlength="14" minlength="6">
+                    </div>
+                       
+                    <button class="btn btn-lg btn-primary btn-block" type="submit"> Sign in </button>
+                    
+                    <div class="form-group">
+                        <label class="checkbox pull-left" style="margin-left: 20px;"> <input type="checkbox" value="remember-me" checked="checked"> Remember me </label>
+                    </div>
+                        <a href="http://localhost:8888/ecommerce/#" class="pull-right need-help"> Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="http://localhost:8888/ecommerce/register.php?create" class="text-center new-account" style="font-size: 18px"> Create an account </a>
+        </div>
+    </div></div>
+        
+
+    </div>
+    <!-- FOOTER STARTS -->
+    <div class="row footer">
+
+        
+    <p class="left"> &nbsp; &nbsp; © 2014 Amadou Barry — All rights reserved. 
+
+
+    	<span class="fa-stack fa-lg pull-right">
+		  <i class="fa fa-square-o fa-stack-2x"></i>
+		  <i class="fa fa-twitter fa-stack-1x"></i>
+		</span>
+
+		<span class="fa-stack fa-lg pull-right">
+		  <i class="fa fa-square-o fa-stack-2x"></i>
+		  <i class="fa fa-facebook fa-stack-1x"></i>
+		</span>
+
+		<span class="fa-stack fa-lg pull-right">
+		  <i class="fa fa-square-o fa-stack-2x"></i>
+		  <i class="fa fa-linkedin fa-stack-1x"></i>
+		</span>
+
+		<span class="fa-stack fa-lg pull-right">
+		  <i class="fa fa-square-o fa-stack-2x"></i>
+		  <i class="fa fa-youtube fa-stack-1x"></i>
+		</span>
+
+		<span class="fa-stack fa-lg pull-right">
+		  <i class="fa fa-square-o fa-stack-2x"></i>
+		  <i class="fa fa-google-plus fa-stack-1x"></i>
+		</span>
+
+    	</p>
+
+
+    </div>
+    <!-- FOOTER ENDS -->
+
+</ul></div>
+
+
+<script src="./Home Page_files/jquery.form-validator.min.js"> </script>
+<script src="./Home Page_files/script.js"> </script>
+<script src="./Home Page_files/route.js"> </script>
+<script src="./Home Page_files/controllers.js"> </script>
+<script> 
+    $.validate(); 
+</script>
+
+
+
+
+
+
+
+</body></html>

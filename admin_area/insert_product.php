@@ -19,10 +19,11 @@ if (isset($_POST['submit'])) {
     $p_keyword = $_POST['p_keyword'];
 
     $p_image = $_FILES["p_image"];
-    move_uploaded_file($_FILES["p_image"]['tmp_name'],"functions/product_image/".$_FILES["p_image"]['name']);
+    move_uploaded_file($_FILES["p_image"]['tmp_name'],"api/product_image/".$_FILES["p_image"]['name']);
     $p_image = $_FILES["p_image"]['name'];
 
-    $product = array($p_title, $p_category, $p_brand, $p_image, $p_price, $p_description, $p_keyword);
+    $product = array("title"=>$p_title,"category"=>$p_category,"brand"=>$p_brand,
+                     "image"=>$p_image,"price"=>$p_price,"description"=>$p_description,"keyword"=>$p_keyword);
 
     $result = insert_new_product($product);
 
@@ -49,19 +50,7 @@ if (isset($_POST['submit'])) {
 
     <img src="images/banner.png" class="img-responsive" width="100%" height="250">
 
-    <ul class="nav nav-tabs">
-        <li ><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
-        <li><a href="view_products.php"> Products </a></li>
-        <li class="active"><a href="insert_product.php"> New Product </a></li>
-        <li><a href="view_categories.php"> Categories </a></li>
-        <li><a href="insert_category.php"> New Category</a></li>
-        <li><a href="view_brands.php"> View Brand </a></li>
-        <li><a href="insert_brand.php"> New Brand </a></li>
-        <li><a href="customers.php"> Customers </a></li>
-        <li><a href="view_orders.php"> Orders </a></li>
-        <li><a href="view_payment.php"> Payments </a></li>
-        <li><a  id="logout" > Logout </a></li>
-    </ul>
+    <?php include "menu.php"; ?>
 
     <div class="jumbotron main">
         <div class="row">
@@ -170,6 +159,8 @@ if (isset($_POST['submit'])) {
         $("#cat_suggestion").html(result);
         }});
     });
+
+    $("#new_product").addClass("active");
 
 </script>
 

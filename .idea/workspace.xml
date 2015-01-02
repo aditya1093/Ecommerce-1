@@ -2,35 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de61c8e-053f-42ef-beb1-fb943de9b98a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/logout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/menu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/Camera.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/DellLaptop.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/Ipad.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/Mac.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/bagpack.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/blackberry" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/ipodnano1n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/samsung.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/samsung.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/toshibaLaptop.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/product_image/windowsTablet.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/styles/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/view_customers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/all_products.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ad_banner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/paypal.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/e-commerce2.iml" afterPath="$PROJECT_DIR$/.idea/e-commerce2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/functions.php" afterPath="$PROJECT_DIR$/functions/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/account.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/products.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/register.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/script.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/components/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/components/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/components/menubar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/components/shopping_cart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/change_password.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customer_login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customer_logout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customer_register.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customers_images/file.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customers_images/image.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/delete_account.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/edit_account.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/my_account.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/styles/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/details.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/payement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/products.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/register.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/account.php" afterPath="$PROJECT_DIR$/views/payement.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/create_tables.sql" afterPath="$PROJECT_DIR$/api/create_tables.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/files/images.php" afterPath="$PROJECT_DIR$/api/files/images.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/brands.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/brands.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/categories.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/categories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/customers.php" afterPath="$PROJECT_DIR$/admin_area/customers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/customers.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/customers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/functions.php" afterPath="$PROJECT_DIR$/admin_area/functions/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/header.php" afterPath="$PROJECT_DIR$/admin_area/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/index.php" afterPath="$PROJECT_DIR$/admin_area/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/insert_brand.php" afterPath="$PROJECT_DIR$/admin_area/insert_brand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/insert_category.php" afterPath="$PROJECT_DIR$/admin_area/insert_category.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/insert_product.php" afterPath="$PROJECT_DIR$/admin_area/insert_product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/login.php" afterPath="$PROJECT_DIR$/admin_area/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/products.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/js/script.js" afterPath="$PROJECT_DIR$/admin_area/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/css/style.css" afterPath="$PROJECT_DIR$/admin_area/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/view_brands.php" afterPath="$PROJECT_DIR$/admin_area/view_brands.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/view_categories.php" afterPath="$PROJECT_DIR$/admin_area/view_categories.php" />
@@ -60,53 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/functions.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="10617" max-vertical-offset="11190">
-              <caret line="734" column="0" selection-start-line="734" selection-start-column="0" selection-end-line="734" selection-end-column="0" />
-              <folding>
-                <marker date="1418928772000" expanded="true" signature="1027:1086" placeholder="select qty f..cart..." />
-                <marker date="1418928772000" expanded="true" signature="1380:1438" placeholder="update cart ..." />
-                <marker date="1418928772000" expanded="true" signature="1606:1672" placeholder="insert into ..." />
-                <marker date="1418928772000" expanded="true" signature="2354:2393" placeholder="select qty f..cart..." />
-                <marker date="1418928772000" expanded="true" signature="2607:2646" placeholder="select qty f..cart..." />
-                <marker date="1418928772000" expanded="true" signature="3328:3368" placeholder="select p_id ..cart..." />
-                <marker date="1418928772000" expanded="true" signature="3543:3610" placeholder="select produ..products..." />
-                <marker date="1418928772000" expanded="true" signature="4436:4493" placeholder="delete from ..." />
-                <marker date="1418928772000" expanded="true" signature="4685:4722" placeholder="select * fro..cart..." />
-                <marker date="1418928772000" expanded="true" signature="4877:4892" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="5091:5200" placeholder="select produ..products..." />
-                <marker date="1418928772000" expanded="true" signature="5675:6443" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="5712:5852" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="5889:6143" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6180:6277" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6314:6409" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6556:6662" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6580:6596" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6698:7326" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6724:7301" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6749:6901" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="6938:7076" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="7101:7275" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="7721:7761" placeholder="select cat_i..categories..." />
-                <marker date="1418928772000" expanded="true" signature="8374:8414" placeholder="select brand..brands..." />
-                <marker date="1418928772000" expanded="true" signature="9055:9095" placeholder="select cat_i..categories..." />
-                <marker date="1418928772000" expanded="true" signature="9744:9784" placeholder="select brand..brands..." />
-                <marker date="1418928772000" expanded="true" signature="10250:11072" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="10565:10657" placeholder="select produ..products..." />
-                <marker date="1418928772000" expanded="true" signature="10752:11072" placeholder="..." />
-                <marker date="1418928772000" expanded="true" signature="10986:11072" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insert_product.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin_area/insert_product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="2730">
-              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1755">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -120,13 +103,17 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/functions/functions.php" />
         <option value="$PROJECT_DIR$/admin_area/insert_product.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -213,7 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin_area" />
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,6 +222,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/admin_area" />
     </key>
   </component>
@@ -301,13 +292,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -356,17 +347,27 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/menubar.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3735" max-vertical-offset="4650">
-          <caret line="249" column="14" selection-start-line="249" selection-start-column="14" selection-end-line="249" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -377,17 +378,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5850">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="2790">
-          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -405,17 +399,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5850">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="2790">
-          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -433,17 +420,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4995">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
+    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1407" max-vertical-offset="2790">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1755">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="1740">
+          <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1970" max-vertical-offset="4605">
+          <caret line="155" column="61" selection-start-line="155" selection-start-column="61" selection-end-line="155" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -461,45 +462,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1970" max-vertical-offset="4605">
           <caret line="155" column="61" selection-start-line="155" selection-start-column="61" selection-end-line="155" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1755">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="1740">
-          <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1970" max-vertical-offset="4605">
-          <caret line="155" column="61" selection-start-line="155" selection-start-column="61" selection-end-line="155" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -517,31 +483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1740">
-          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2790">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="3810">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="199" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -559,21 +504,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="395" max-vertical-offset="1740">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2790">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3810">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -587,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin_area/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
@@ -601,38 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1545">
           <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23013245" vertical-offset="611" max-vertical-offset="1215">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47847682" vertical-offset="701" max-vertical-offset="1935">
-          <caret line="66" column="42" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -643,38 +539,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cart.php">
+    <entry file="file://$PROJECT_DIR$/views/cart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="1665">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="135" max-vertical-offset="1245">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3617" max-vertical-offset="4305">
-          <caret line="249" column="14" selection-start-line="249" selection-start-column="14" selection-end-line="249" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_tables.sql">
+    <entry file="file://$PROJECT_DIR$/api/create_tables.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/menubar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="420">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -685,50 +560,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+    <entry file="file://$PROJECT_DIR$/admin_area/insert_product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10617" max-vertical-offset="11190">
-          <caret line="734" column="0" selection-start-line="734" selection-start-column="0" selection-end-line="734" selection-end-column="0" />
-          <folding>
-            <marker date="1418928772000" expanded="true" signature="1027:1086" placeholder="select qty f..cart..." />
-            <marker date="1418928772000" expanded="true" signature="1380:1438" placeholder="update cart ..." />
-            <marker date="1418928772000" expanded="true" signature="1606:1672" placeholder="insert into ..." />
-            <marker date="1418928772000" expanded="true" signature="2354:2393" placeholder="select qty f..cart..." />
-            <marker date="1418928772000" expanded="true" signature="2607:2646" placeholder="select qty f..cart..." />
-            <marker date="1418928772000" expanded="true" signature="3328:3368" placeholder="select p_id ..cart..." />
-            <marker date="1418928772000" expanded="true" signature="3543:3610" placeholder="select produ..products..." />
-            <marker date="1418928772000" expanded="true" signature="4436:4493" placeholder="delete from ..." />
-            <marker date="1418928772000" expanded="true" signature="4685:4722" placeholder="select * fro..cart..." />
-            <marker date="1418928772000" expanded="true" signature="4877:4892" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="5091:5200" placeholder="select produ..products..." />
-            <marker date="1418928772000" expanded="true" signature="5675:6443" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="5712:5852" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="5889:6143" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6180:6277" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6314:6409" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6556:6662" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6580:6596" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6698:7326" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6724:7301" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6749:6901" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="6938:7076" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="7101:7275" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="7721:7761" placeholder="select cat_i..categories..." />
-            <marker date="1418928772000" expanded="true" signature="8374:8414" placeholder="select brand..brands..." />
-            <marker date="1418928772000" expanded="true" signature="9055:9095" placeholder="select cat_i..categories..." />
-            <marker date="1418928772000" expanded="true" signature="9744:9784" placeholder="select brand..brands..." />
-            <marker date="1418928772000" expanded="true" signature="10250:11072" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="10565:10657" placeholder="select produ..products..." />
-            <marker date="1418928772000" expanded="true" signature="10752:11072" placeholder="..." />
-            <marker date="1418928772000" expanded="true" signature="10986:11072" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.36585367" vertical-offset="30" max-vertical-offset="2595">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/insert_product.php">
+    <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="2730">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.63414633" vertical-offset="2715" max-vertical-offset="3330">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3885">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1725">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding />
         </state>
       </provider>

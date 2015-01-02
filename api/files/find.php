@@ -1,32 +1,29 @@
 <?php
 
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
-
      header('Content-Type: application/json'); 
-     include "../../../api/functions.php";
+     include "../functions.php";
 
     $postdata = file_get_contents("php://input");
     $request = json_decode($postdata);
 
-    $category = $request->category;
+    $search = $request->search;
 
-    if(isset($category) && $category != 'all'){
+    if(isset($search) && trim($search) != ''){
 
-        $category =  "%".strip_tags( trim( $category ) )."%";
+        $search =  "%".strip_tags( trim( $search ) )."%";
+
     }
     else
-        $category = "%";   
+        $search = "%";   
  
 
      try{
             $result = $con->prepare('select product_id, product_title, product_brand,
                                         product_cat, product_image, product_keywords,product_price,
                                         product_desc from products where product_keywords 
-                                        like :category');
+                                        like :search or product_brand like :search or product_title like :search');
 
-            $result->bindParam(':category', $category);
+            $result->bindParam(':search', $search);
             $result->execute();
             
             $product = array();

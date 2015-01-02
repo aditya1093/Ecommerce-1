@@ -26,19 +26,7 @@ if (empty($_SESSION['admin_email']))
 
     <img src="images/banner.png" class="img-responsive" width="100%" height="200">
 
-    <ul class="nav nav-tabs">
-        <li ><a href="index.php"> Home <span class="glyphicon glyphicon-home"></span></a></li>
-        <li><a href="view_products.php"> Products </a></li>
-        <li ><a href="insert_product.php"> New Product </a></li>
-        <li class="active"><a href="view_categories.php"> Categories </a></li>
-        <li><a href="insert_category.php"> New Category</a></li>
-        <li><a href="view_brands.php"> Brands </a></li>
-        <li><a href="insert_brand.php"> New Brand </a></li>
-        <li><a href="customers.php"> Customers </a></li>
-        <li><a href="view_orders.php"> Orders </a></li>
-        <li><a href="view_payment.php"> Payments </a></li>
-        <li><a  id="logout" > Logout </a></li>
-    </ul>
+    <?php include "menu.php"; ?>
 
     <div class="jumbotron main">
         <div class="row">
@@ -85,12 +73,12 @@ if (empty($_SESSION['admin_email']))
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 <script src="js/script.js"></script>
 <script> 
-
-    $('#category_table').dataTable();
+    $('#categories').addClass("active");
+    
 
     function Categories($scope, $http) {
            
-        $http.get("functions/files/categories.php").success(function(response){
+        $http.get("api/files/categories.php").success(function(response){
             $scope.categories = response;
         });
         
@@ -104,7 +92,6 @@ if (empty($_SESSION['admin_email']))
            alert('hsdfjdsflkjsdfl');
         }
     }
-
 </script>
 
 </body>

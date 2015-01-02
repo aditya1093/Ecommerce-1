@@ -1,3 +1,18 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css");          
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css");
+
+@import url("//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css");
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css");
+@import url("//fonts.googleapis.com/css?family=Cabin");
+@import url("//fonts.googleapis.com/css?family=Lobster");
+
+
+
+        .menu li:hover ul {
+            display: block; /* display the dropdown */
+        }
+
         .wrapper{
             -moz-box-shadow: 2px 2px 5px 5px #999;
             -webkit-box-shadow: 2px 2px 5px 5px #999;
@@ -5,19 +20,80 @@
 
         }
         .main{
-              min-height: 450px ; 
+              min-height: 400px; 
         }
+        .h3{
+            font-size: 25px !important;
+        }
+
+        .products-image{
+            width: 220px;
+            height: 200px;
+            border-radius: 15px;
+            opacity: 1;
+        }
+        .product-image{
+            width: 340px;
+            height: 300px;
+            border-radius: 15px;
+            opacity: 1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .product-image:hover{
+            opacity: .7;
+        }
+
+        .product-box{
+            margin-bottom: 30px;
+        }
+        .product-image-item{
+            border-radius: 15px;
+            max-height: 300px;
+        }
+
+        .product-box .btn{
+            margin-top: 2px;
+        }
+        .price{
+            position: absolute;
+            top: 60%;
+            right: 15;
+            visibility: hidden;
+            vertical-align: center;
+            opacity: .9;
+        }
+
+          .product-box:hover .price{
+            visibility: visible;
+        }
+        .customer-menu-page{
+             font-size: 25px;
+            font-family: 'Stalemate', cursive;
+        }
+  
 
         label, input {
             font-size: 18px;
             font-family: 'Cabin', Helvetica, Arial, sans-serif;
             line-height: 20px;
         }
+        
         .h1{
             font-family: 'Lobster', Georgia, Times, serif !important;
+            padding-bottom: 40px;
+            font-family: 'Raleway', sans-serif;
+        }
+        .h2{
+            font-family: 'Lobster', Georgia, Times, serif !important;
+            font-size: 35px !important;
             padding-bottom: 50px;
             font-family: 'Raleway', sans-serif;
         }
+
+
         .jumbotron{
             background-color: #F6F6F6 !important; 
 
@@ -64,8 +140,7 @@
         }
 
         .nav-tabs{
-            font-size: 18px !important;
-            padding: 0 30px !important;
+            font-size: 15px !important;
         }
         #edit, #remove{
             color: #336699;

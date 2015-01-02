@@ -1,0 +1,45 @@
+       
+    <div class="col-sm-3 col-md-3 pull-right" >
+        <form class="navbar-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control find" placeholder="Search" name="find" 
+                    style="height: 34px; width: 180px;" ng-keyup="find()" ng-keypress="find()" ng-model="findValue">
+
+                <div class="input-group-btn">
+                    <button class="btn btn-default btn-md" type="submit" style="margin-top: 5px;"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div> 
+    
+    <div class="row">
+
+        <header>
+            <p class="text-center h1">  </p>
+        </header>
+        <div data-ng-repeat="product in products" class="col-xs-4 product-box">
+            
+            <div class="col-xs-12"> 
+                <div class="product-image-item">
+                    <div class="image">
+                        <img data-ng-src='admin_area/functions/product_image/{{ product.image }}' class="img-responsive img-thumbnail products-image">
+                            
+                           <div class="price">
+                              <a class="btn btn-info"> Price: {{ product.price | currency}} </a>
+                            </div>
+
+                    </div>
+                        
+                        <a class="btn btn-sm btn-default" ng-click="addToCart(product.id)">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+                        </a> &nbsp;&nbsp;
+                        <a class="btn btn-sm btn-default" href="#/product/{{product.id}}">
+                            <span class="glyphicon glyphicon-eye-open detail"></span> View Details</a>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+

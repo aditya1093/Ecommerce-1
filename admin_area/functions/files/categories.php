@@ -1,9 +1,9 @@
 <?php
 
      header('Content-Type: application/json'); 
-     include "../functions.php";
+     include "../../../api/functions.php";
 
-     global $localhost, $username, $password, $database;
+     global $host, $username, $password, $database;
         $con = new mysqli($localhost, $username, $password, $database);
 
         /* check connection */
