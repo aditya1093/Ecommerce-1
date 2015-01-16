@@ -7,13 +7,17 @@
     .menu li:hover ul {
         display: block; /* display the dropdown */
     }
+    
+    .container{
+        
+    }
 
     .wrapper{
         -moz-box-shadow: 2px 2px 5px 5px #999;
         -webkit-box-shadow: 2px 2px 5px 5px #999;
         box-shadow: 2px 2px 5px 5px #999;
-
     }
+
     .main{
           min-height: 400px; 
     }

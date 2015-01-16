@@ -5,7 +5,7 @@ ini_set('display_startup_errors',1);
 error_reporting(-1);
 
      header('Content-Type: application/json'); 
-     include "../../../api/functions.php";
+     include "../functions.php";
 
     $postdata = file_get_contents("php://input");
     $request = json_decode($postdata);

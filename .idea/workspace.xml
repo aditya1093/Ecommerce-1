@@ -2,65 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de61c8e-053f-42ef-beb1-fb943de9b98a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/account.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/products.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/register.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/script.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cart.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/menubar.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/shopping_cart.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/change_password.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customer_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customer_logout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customer_register.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customers_images/file.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/customers_images/image.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/delete_account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/edit_account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/my_account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customer/styles/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/details.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/functions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/payement.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/products.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/register.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/account.php" afterPath="$PROJECT_DIR$/views/payement.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/create_tables.sql" afterPath="$PROJECT_DIR$/api/create_tables.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/files/images.php" afterPath="$PROJECT_DIR$/api/files/images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/brands.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/brands.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/categories.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/categories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/customers.php" afterPath="$PROJECT_DIR$/admin_area/customers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/customers.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/customers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/functions.php" afterPath="$PROJECT_DIR$/admin_area/functions/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/header.php" afterPath="$PROJECT_DIR$/admin_area/header.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/admin_area.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/customers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/files/brands.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/files/categories.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/files/customers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/files/logout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/files/products.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/Camera.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/DellLaptop.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/HP-desktop-computer.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/Ipad.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/Mac.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/bagpack.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/blackberry.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/iphone6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/ipodnano1n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/samsung.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/samsung.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/samsungtablet.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/toshibaLaptop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/product_image/windowsTablet.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/functions/validate-user.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/images/administrator-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/images/banner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/insert_brand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/insert_category.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/insert_product.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/js/bootstrap-filestyle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/js/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/menu.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/suggestions/brand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/suggestions/category.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/suggestions/products.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/view_brands.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/view_categories.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/view_orders.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/view_payment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_area/view_products.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/cart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/find.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/images.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/logout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/product.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/register.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/remove_account.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/session.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/files/test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/register.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/controllers.js" afterPath="$PROJECT_DIR$/script/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/index.php" afterPath="$PROJECT_DIR$/admin_area/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/insert_product.php" afterPath="$PROJECT_DIR$/admin_area/insert_product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/login.php" afterPath="$PROJECT_DIR$/admin_area/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/functions/files/products.php" afterPath="$PROJECT_DIR$/admin_area/functions/files/products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/js/script.js" afterPath="$PROJECT_DIR$/admin_area/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/css/style.css" afterPath="$PROJECT_DIR$/admin_area/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/view_brands.php" afterPath="$PROJECT_DIR$/admin_area/view_brands.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/view_categories.php" afterPath="$PROJECT_DIR$/admin_area/view_categories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_area/view_products.php" afterPath="$PROJECT_DIR$/admin_area/view_products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/products.html" afterPath="$PROJECT_DIR$/views/products.html" />
     </list>
     <ignored path="e-commerce2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,8 +94,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1755">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1680">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -244,15 +250,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -292,8 +298,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -365,6 +371,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -385,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1755">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="995" max-vertical-offset="1740">
@@ -403,13 +410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5850">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1755">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -427,13 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1755">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="1740">
@@ -448,13 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1755">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="1740">
@@ -466,13 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1970" max-vertical-offset="4605">
           <caret line="155" column="61" selection-start-line="155" selection-start-column="61" selection-end-line="155" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1755">
-          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -487,13 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="3810">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="199" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1755">
-          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -518,13 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1545">
@@ -532,38 +497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="1680">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="1665">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/create_tables.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/insert_category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="1065">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/insert_product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36585367" vertical-offset="30" max-vertical-offset="2595">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -583,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1725">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1680">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding />
         </state>
       </provider>

@@ -22,7 +22,7 @@
 
      user = {email: '', firstname: '', lastname: ''};
 
-      $http.get("api/files/session.php").success(function(data){
+      $http.get("/ecommerce/api/data/session.php").success(function(data){
           if(data.email){
             $cookieStore.put('email' , data.email);
             $cookieStore.put('firstname' , data.firstname);
@@ -37,7 +37,7 @@
           root = {};
 
           root.addToCart = function(product){
-             return $http.get('api/files/cart.php?id='+product, { cache: true });
+             return $http.get('/ecommerce/api/data/cart.php?id='+product, { cache: true });
           }
 
           return {root: root};
@@ -59,7 +59,7 @@
     
 
            //GETTING PRODUCT FROM THE DATABASE BY CATEGORY
-           $http.post("admin_area/functions/files/products.php", {category : $scope.category})
+           $http.post("/ecommerce/api/data/products.php", {category : $scope.category})
              .success(function(data){
                   $scope.products = data;
               });
@@ -67,7 +67,7 @@
            //GETING PRODUCTS FROM THE DATABASE BASE ON THE INPUT OF THE SEARCH INPUT FIELD
            $scope.find = function(){
 
-             $http.post("api/files/find.php", { search : $scope.findValue })
+             $http.post("/ecommerce/api/data/find.php", { search : $scope.findValue })
                .success(function(response){
                   $scope.products = response;
               });
@@ -95,7 +95,7 @@
      	$scope.id = $routeParams.id || 1;
 
       //GETTING SINGLE PRODUCT FROM THE DATABASE
-      $http.post("api/files/product.php", {id : $scope.id}).success(function(response){
+      $http.post("/ecommerce/api/data/product.php", {id : $scope.id}).success(function(response){
             $scope.product = response;
             
             });
@@ -121,7 +121,7 @@ myApp.controller("Account",['$scope', '$http','Session', 'Data', '$location', '$
 
         $scope.doLogout = function(){
             $cookieStore.remove("user");
-            Data.get('api/files/logout.php').then(function (results) {
+            Data.get('/ecommerce/api/data/logout.php').then(function (results) {
                  $location.path('/login');
             });
         }
@@ -138,7 +138,7 @@ myApp.controller("Account",['$scope', '$http','Session', 'Data', '$location', '$
       $scope.login = {};
 
         $scope.doLogin = function (user) {
-              Data.post('api/files/login.php', user).then(function (results) {
+              Data.post('/ecommerce/api/data/login.php', user).then(function (results) {
                  var user = results.data;
 
                   if (user.email == $scope.user.email) {
@@ -161,7 +161,7 @@ myApp.controller("Account",['$scope', '$http','Session', 'Data', '$location', '$
         }
 
       $scope.register = function(user){  
-                var response = $http.post("/ecommerce/api/files/register.php", user);
+                var response = $http.post("/ecommerce/api/data/register.php", user);
                 response.success(function(data, status, headers, config) {
                       console.log(data);
                        if(data.status === 'success')
@@ -199,49 +199,3 @@ myApp.controller("Account",['$scope', '$http','Session', 'Data', '$location', '$
 
    }]);
 
-
-
-
-
-
-
-
-
-
-/*
-
-  app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location, $http, Data) {
-    //initially set those objects to null to avoid undefined error
-    $scope.login = {};
-    $scope.signup = {};
-    $scope.doLogin = function (customer) {
-
-        Data.post('login', {
-            customer: customer
-        }).then(function (results) {
-            Data.toast(results);
-            if (results.status == "success") {
-                $location.path('dashboard');
-            }
-        });
-
-    };
-    $scope.signup = {email:'',password:'',name:'',phone:'',address:''};
-    $scope.signUp = function (customer) {
-        Data.post('signUp', {
-            customer: customer
-        }).then(function (results) {
-            Data.toast(results);
-            if (results.status == "success") {
-                $location.path('dashboard');
-            }
-        });
-    };
-    $scope.logout = function () {
-        Data.get('logout').then(function (results) {
-            Data.toast(results);
-            $location.path('login');
-        });
-    }
-});
-*/
