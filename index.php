@@ -3,7 +3,6 @@
 
 <head>
      <title> Ecommerce </title>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +16,6 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"> </script>
     <script src="/ecommerce/script/bootstrap-filestyle.min.js"> </script>
     <link href="/ecommerce/css/style.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body data-ng-app="myApp">
